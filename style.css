@@ -77,12 +77,12 @@ main{
     display: grid; /*wyświetlaj w siatce*/
     grid-template-columns: repeat(3,1fr);/*definicja kolumn*/
     grid-gap:50px;
-
-    @media(max-width:700px) and (min-width:500px){}
+}
+    @media(max-width:700px) and (min-width:500px){
         .postlist{
             grid-template-columns: repeat(2,1fr);
 
-
+        }
 }
 
 @media(max-width:500px){
@@ -138,4 +138,107 @@ font-size: 20px;
 main>h2{
     text-align: center;
     color: darkslateblue;
+}
+
+/* sekcja kontaktowa */
+
+section{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; /*pozwala na przenienienie nastpebij linijki*/
+}
+
+section>h2{
+    text-align: center;
+    width: 100%;
+}
+
+section>img{
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin-right: 15px;
+}
+
+@media(max-width:600px){
+    section>img{
+        margin: 0 auto 50px;
+    }
+}
+
+section>form{
+width: calc(100%-215px);
+}
+
+@media(max-width:600px){
+    section>form{
+            width:100%
+        }
+
+}
+
+form>input{
+    width: 100%;
+    border: none;
+    box-shadow: 0 10px 15px -3px #0000001a;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 15px;
+border-radius: 3px;
+}
+
+form>textarea{
+    width: 100%;
+    border: none;
+    box-shadow: 0 10px 15px -3px #0000001a;
+    margin-bottom: 20px;
+    padding: 8px;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+form>input[type=submit]{
+    width: 25%;
+    background-color: plum;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* stopka  */
+
+footer{
+    width: 100%;
+    height: 60px;
+    background-color: rebeccapurple;
+font-weight: 600;
+text-align: center; /*tekst w srodku*/
+line-height: 60px; /*wysokosc tesktu*/
+}
+
+
+/* podstrona wydarzenia */
+
+.text{
+    max-width: 100%;
+    margin: 0 auto ;
+}
+
+.text>img{
+    width: 50%;
+    height: 250px;
+    margin: 0 auto;
+    display: block;
+}
+
+.text>.data{
+    text-align: center;
+}
+
+.text>h1{
+    text-align: center;
+}
+
+.text>p{
+    text-align: justify;
 }
